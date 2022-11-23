@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<title>Registro de usuarios</title>
+	<!-- CSS and Bootstrap -->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+	<link rel="stylesheet" href="/UsuarioCSS/Usuario-crear.css">
+	<link rel="stylesheet" href="/CSS/Slide - Menú.css">
+	<!-- CSS and Bootstrap -->
+
+</head>
+<!-- Logo -->
+<link rel="icon" href="/IMG/table.svg" />
+<!-- Logo -->
+</head>
+
+<!--Header-->
+<header>
+
+	<a class="">
+		<img src="/IMG/Header-Administradores.png.gif" style="margin-top:-1% ; width: 100.1%; " />
+
+</header>
+<!--Header-->
+
+<body>
+
+	<!--JavaScript-->
+	<script src="/UsuarioCSS/Alert.js"></script>
+	<script src="/js/validar.js"></script>
+	<script src="/js/Slide - menú.js"></script>
+	<!--JavaScript-->
+
+	<!--Menu-->
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="index">Inicio</a>
+		<a href="#">Dashboard</a>
+		<a href="/usuarios">Usuarios</a>
+		<a href="">Cerrar sesión</a>
+	</div>
+
+	<div class="Menu">
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menú</span>
+	</div>
+	<!--Menu-->
+
+
+
+
+
+	<br>
+	<div class="formulario">
+		<div class="row">
+			<div>
+				<h1>Nuevo usuario</h1>
+				<div class="card-body">
+					<form th:action="@{/usuarios}" th:object="${usuarios}" method="POST">
+
+						<div>
+							<label>Nombres : </label>
+							<input th:onkeypress="return SoloLetras(event);" type="text" name="nombre"
+								th:field="*{Nombre}" class="form-control" placeholder="Digite nombres  " required>
+						</div>
+
+						<div>
+							<label>Apellidos : </label>
+							<input type="text" name="apellido" th:field="*{Apellido}" class="form-control"
+								placeholder="Digite apellidos  " required th:onkeypress="return SoloLetras(event);">
+						</div>
+
+						<div>
+							<label>Tipo de documento : </label>
+							<br>
+							<select class="form-control" aria-label="Default select example"
+								th:field="*{Tipo_documento}">
+
+								<option value="Cedula de ciudadania">Cedula de ciudadania</option>
+								<option value="Cedula de extranjeria">Cedula de extranjeria</option>
+								<option value="Pasaporte">Pasaporte</option>
+							</select>
+						</div>
+
+						<div>
+							<label>Documento : </label>
+							<input th:onkeypress="return SoloNumeros(event);" type="text" name="Numero_documento"
+								th:field="*{Numero_documento}" class="form-control"
+								placeholder="Digite número de documento  " required>
+						</div>
+
+						<div>
+							<label>Dirección : </label>
+							<input type="text" name="Direccion" th:field="*{Direccion}" class="form-control"
+								placeholder="Digite dirección de residencia  " required>
+						</div>
+
+						<div>
+							<label>Teléfono : </label>
+							<input th:onkeypress="return SoloNumeros(event);" type="text" name="Telefono"
+								th:field="*{Telefono}" class="form-control" placeholder="Digite número de contacto  "
+								required maxlength="10">
+						</div>
+
+
+						<div>
+							<label>Correo : </label>
+							<input type="email" name="Correo" th:field="*{Correo}" class="form-control"
+								placeholder="Digite dirección de correo electronico  " required>
+						</div>
+
+						<div>
+							<label>Contraseña : </label>
+							<input type="text" name="Contraseña" th:field="*{Contraseña}" class="form-control"
+								placeholder="Digite la contraseña" required>
+						</div>
+
+						<div>
+							<button type="reset" class="btn btn-success">Limpiar</button>
+						</div>
+						<div>
+							<button th:onclick="crearusuario()" class="btn btn-success">Guardar</button>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+
+</html>

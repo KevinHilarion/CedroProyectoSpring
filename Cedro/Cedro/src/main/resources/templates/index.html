@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<title>El Cedro</title>
+
+	
+
+
+	<!-- CSS y Bootstrap -->
+	<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="CSS/index.css">
+	<link rel="stylesheet" href="CSS/cookie.css">
+	<link rel="stylesheet" href="CSS/Slide - Menú.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="Social bar/font.css">
+	<link rel="stylesheet" href="Social bar/main.css">
+	<link rel="stylesheet" href="Social bar/style.css">
+	<!-- CSS y Bootstrap -->
+
+	<!-- Logo -->
+	<link rel="icon" href="/IMG/tree.svg" />
+	<!-- Logo -->
+</head>
+
+<body>
+	
+	<!--Cookies-->
+	<div class="aviso-cookies" id="aviso-cookies">
+		<img class="galleta" src="./img/cookie.svg" alt="Galleta">
+		<h3 class="titulo">Cookies</h3>
+		<p class="parrafo">Utilizamos cookies propias y de terceros para mejorar nuestros servicios.</p>
+		<button class="boton" id="btn-aceptar-cookies">De acuerdo</button>
+		<a class="enlace" href="cookies">Aviso de Cookies</a>
+	</div>
+	<div class="fondo-aviso-cookies" id="fondo-aviso-cookies"></div>
+	<!--Cookies-->
+
+	<!--JavaScript-->
+	<script src="/js/cookie.js"></script>
+	<script src="/js/Slide - menú.js"></script>
+	<script src="/js/MensajeIndex.js"></script>
+	<!--JavaScript-->
+
+
+
+
+	<!--Header-->
+	<header>
+
+		<a href="">
+			<img src="/IMG/Header-web.png" title="El Cedro" style="margin-top:-2% ; width: 100.1%; " />
+
+	</header>
+	<!--Header-->
+
+	<!--Menu-->
+	<div class="container">
+		<div class="tutorial">
+			<ul>
+				<a href="index">
+					<li>Inicio</li>
+				</a>
+				<a href="/Iniciar">
+					<li>Iniciar sesión <i class="fa-solid fa-arrow-right-to-bracket"></i></li>
+				</a>
+				<li>Inspiración<i class="fa fa-angle-down"></i>
+					<ul>
+						<a href="https://www.calameo.com/read/0064764772511493c05db" target="_blank">
+							<li>Salas</li>
+						</a>
+						<a href="https://www.calameo.com/read/0064764772aef44efd3a8" target="_blank">
+							<li>Comedores</li>
+						</a>
+						<a href="https://www.calameo.com/read/0064764770940b817492e" target="_blank">
+							<li>Closets</li>
+						</a>
+						<a href="https://www.calameo.com/read/006476477ff6d6f41cc58" target="_blank">
+							<li>Alcobas</li>
+						</a>
+					</ul>
+				</li>
+
+				<a onclick="mensaje()">
+					<li>Contactanos</li><a />
+			</ul>
+		</div>
+	</div>
+	<!--Menu-->
+
+
+	<!--Contenido-->
+
+	<!--Social bar-->
+	<div class="social-bar">
+		<a href="https://www.facebook.com/Maderas-Finas-101500835023458/?modal=admin_todo_tour" target="_blank"
+			class="icon icon-facebook"></a>
+		<a href="https://wa.link/2rn9mf" target="_blank" class="icon icon-whatsapp"></a>
+		<a href="https://www.instagram.com/" target="_blank" class="icon icon-instagram"></a>
+	</div>
+	<!--Social bar-->
+
+	<div>
+		<article>
+			<h1 align="center"> Bienvenidos </h1>
+
+
+
+
+			<p><strong>En el S.I "El Cedro" queremos brindar una herramienta que facilite la completa gestion de la
+					empesa "MADERAS FINAS " , en donde puede encontrar tres diferentes apartados que ayudaran en la
+					organización de la misma,
+					los cuales son: Ventas , Inventario y Producción , disfruta de este sistema visualiza nuestros
+					diseños y organiza tus ventas en los modulos correspondientes.
+				</strong>
+			</p>
+		</article>
+	</div>
+
+	<!--selección-->
+	<h1 align="center"> Nuestras categorias </h1>
+	<br><br><br><br><br><br>
+
+	<div class="row">
+
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<img src="/IMG/Salas.jpg" alt="Avatar" style="width:350px;height:300px;">
+				</div>
+
+				<div class="flip-card-back">
+					<h2 id="h1">Salas</h2>
+					<p>Explora la belleza de estas salas para inspirarte en la creación de tu espacio personal.
+						A continuación, te invitamos a conocer de cerca de los precios del trabajo de los expertos en
+						decoración de Maderas Finas
+						y a realizar una cotizacion aproximada del producto.</p>
+					<a href="cotizacion-cliente"><br>
+						<input type="button" value="Cotizar" id="submit" class="button"
+							title="Hacer una cotización con un precio aproximado de tu producto favorito" />
+					</a>
+				</div>
+			</div>
+
+		</div><br><br>
+
+
+
+
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<img src="/IMG/Comedores.jpg" alt="Avatar" style="width:350px;height:300px;">
+				</div>
+				<div class="flip-card-back">
+					<h2 id="h1">Comedores</h2>
+					<p>Explora la belleza de estos comedores para inspirarte en la creación tu espacio personal.
+						A continuación, te invitamos a conocer de cerca de los precios del trabajo de los expertos en
+						decoración de Maderas Finas
+						y a realizar una cotizacion aproximada del producto.</p>
+					<a href="cotizacion-cliente"><br>
+						<input type="button" value="Cotizar" id="submit" class="button"
+							title="Hacer una cotización con un precio aproximado de tu producto favorito" />
+					</a>
+				</div>
+			</div>
+		</div><br><br>
+
+
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<img src="/IMG/Walking-closets.jpg" alt="Avatar" style="width:350px;height:300px;">
+				</div>
+				<div class="flip-card-back">
+					<h2 id="h1">Closets</h2>
+					<p>Explora la belleza de estos closets para inspirarte en la creación tu espacio personal.
+						A continuación, te invitamos a conocer de cerca de los precios del trabajo de los expertos en
+						decoración de Maderas Finas
+						y a realizar una cotizacion aproximada del producto.</p><br>
+					<a href="cotizacion-cliente">
+						<input type="button" value="Cotizar" id="submit" class="button"
+							title="Hacer una cotización con un precio aproximado de tu producto favorito" />
+					</a>
+				</div>
+			</div>
+		</div><br><br>
+
+
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<img src="/IMG/Alcobas.jpg" alt="Avatar" style="width:350px;height:300px;">
+				</div>
+				<div class="flip-card-back">
+					<h2 id="h1">Alcobas</h2>
+					<p>Explora la belleza de estas alcobas para inspirarte en la creación tu espacio personal.
+						A continuación, te invitamos a conocer de cerca de los precios del trabajo de los expertos en
+						decoración de Maderas Finas
+						y a realizar una cotizacion aproximada del producto.</p><br>
+					<a href="cotizacion-cliente">
+						<input type="button" value="Cotizar" id="submit" class="button"
+							title="Hacer una cotización con un precio aproximado de tu producto favorito" />
+					</a>
+				</div>
+			</div>
+		</div><br><br>
+	</div>
+
+	<div class="col">
+
+		<!--selección-->
+
+		<br><br><br><br><br><br><br><br><br>
+		<div>
+			<h1 align="center"> Ubicación </h1><br><br><br>
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!4v1663197164077!6m8!1m7!1sHN2K3KLqpsD6lFdihx8i3w!2m2!1d4.496065045460665!2d-74.10383881283701!3f168.70882730610592!4f8.599958278640997!5f0.7820865974627469"
+				width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade" class="maps"></iframe>
+
+		</div>
+	</div>
+
+
+	<!--Contenido-->
+
+
+	<!--footer-->
+
+	<div class="footer-clean">
+		<footer>
+			<div class="container__footer">
+				<div class="box__footer">
+					<div class="logo">
+						<img src="img/logo.png" alt="">
+					</div>
+					<div class="terms">
+						<p>El Cedro es un sistema de información encargado de la gestión de ventas, inventario y
+							producción de la empresa Madera Finas.</p>
+					</div>
+				</div>
+				<div class="box__footer">
+					<h2>Soluciones</h2>
+					<a href="https://www.google.com">App Desarrollo</a>
+					<a href="#">App Marketing</a>
+					<a href="#">IOS Desarrollo</a>
+					<a href="#">Android Desarrollo</a>
+				</div>
+
+				<div class="box__footer">
+					<h2>Compañia</h2>
+					<a href="#">Acerca de</a>
+					<a href="#">Trabajos</a>
+					<a href="#">Procesos</a>
+					<a href="#">Servicios</a>
+				</div>
+
+				<div class="box__footer">
+					<h2>Redes Sociales</h2>
+					<a href="https://www.facebook.com/Maderas-Finas-101500835023458/?modal=admin_todo_tour"
+						target="_blank"> <i class="fab fa-facebook-square"></i> Facebook</a>
+					<a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
+					<a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
+					<a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i>
+						Instagram</a>
+				</div>
+
+			</div>
+
+			<div class="box__copyright">
+				<hr>
+				<p>Todos los derechos reservados © 2022 <b>El Cedro</b></p>
+			</div>
+		</footer>
+
+		<!--footer-->
+
+
+
+</body>
+
+</html>

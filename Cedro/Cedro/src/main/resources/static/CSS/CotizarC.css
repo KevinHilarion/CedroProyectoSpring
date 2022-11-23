@@ -1,0 +1,239 @@
+.body{
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/*botonera*/
+
+.container {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-decoration: none;
+  margin-right:300%;
+}
+
+.tutorial {
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 170%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  
+}
+
+
+.tutorial .information h1 {
+  color: #333;
+  font-size: 1.5rem;
+  padding: 0px 10px;
+  border-left: 3px solid #f03861;
+  text-decoration: none;
+}
+.tutorial .information h3 {
+  color: #e0e0e0;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0px 10px;
+  border-left: 3px solid #f03861;
+  text-decoration: none;
+}
+
+.tutorial ul {
+  font-size: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+.tutorial ul li {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #333;
+  display: inline-block;
+  padding: 15px;
+  position: relative;
+  text-decoration: none;
+}
+.tutorial ul li ul {
+  display: none;
+  text-decoration: none;
+}
+.tutorial ul li:hover {
+  cursor: pointer;
+  background-color: #f2f2f2;
+  text-decoration: none;
+}
+.tutorial ul li:hover ul {
+  display: block;
+  margin-top: 15px;
+  width: 200px;
+  left: 0;
+  position: absolute;
+  text-decoration: none;
+}
+.tutorial ul li:hover ul li {
+  display: block;
+  background-color: #e7e7e7;
+  text-decoration: none;
+}
+.tutorial ul li:hover ul li span {
+  float: right;
+  color: #f9f9f9;
+  background-color: #f03861;
+  padding: 2px 5px;
+  text-align: center;
+  font-size: 0.8rem;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.tutorial ul li:hover ul li:hover {
+  background-color: #e0e0e0;
+  text-decoration: none;
+}
+.tutorial ul li:hover ul li:hover span {
+  background-color: #ee204e;
+  text-decoration: none;
+}
+
+
+
+
+/*botonera*/
+
+/*Contenido*/ 
+/*Formulario*/
+
+ .formulario{
+	
+	margin:38%;
+     background:white;
+     box-shadow: 0px 0px 30px rgb(0, 0, 0);
+     margin-top: 10%;
+     padding: 30px 80px;
+     height: 860px;
+     width: 26%;
+     
+    
+    
+    
+ }
+ 
+h1{
+  padding-bottom:5%;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 70px;
+  color:  #DBBA9D;
+  -webkit-text-stroke: 1px #663E39 ;
+} 
+
+ 
+ .btn-success{
+	margin-top: 7%;
+	margin-left: 30%;
+    text-decoration: none;
+	border: none;
+	width: 35%;
+	color: white;
+	font-size: 20px;
+	background: #663E39;
+	border-radius: 5px;
+	cursor: pointer;
+	-webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+   
+}
+
+.btn-success:hover{
+	
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	width: 40%;
+	background: #DBBA9D;
+    
+}
+ 
+
+
+ 
+/*Formulario*/
+
+
+
+
+/*Contenido*/
+
+
+/* footer */
+
+footer{
+ margin-top:-30%;
+  width: 100%;
+  height: 1050px;
+  padding: 100px 30px;
+  background-image: url(/IMG/background-footer.svg);
+  background-size:cover;
+  
+}
+
+.container__footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 80px;
+}
+
+.box__footer{
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.box__footer .logo img{
+  width: 350px;
+  height: 300px;
+
+}
+
+.box__footer .terms{
+  max-width: 350px;
+  padding-top: 10px;
+  font-weight: 500;
+  color: #7a7a7a;
+  font-size: 18px;
+}
+
+.box__footer h2{
+  margin-bottom: 30px;
+  color: #343434;
+  font-weight: 700;
+}
+
+.box__footer a{
+  margin-top: 10px;
+  color: #7a7a7a;
+  font-weight: 600;
+}
+
+.box__footer a:hover{
+  opacity: 0.5;
+}
+
+.box__footer a .fab{
+  font-size: 20px;
+}
+
+.box__copyright{
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 0px 40px;
+}
+
+.box__copyright p{
+  margin-top: 20px;
+  color: #7a7a7a;
+}
+
+.box__copyright hr{
+  border: none;
+  height: 1px;
+  background-color: #7a7a7a;
+}
+
+

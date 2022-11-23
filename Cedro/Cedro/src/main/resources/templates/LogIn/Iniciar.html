@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<title>El Cedro - Iniciar sesión</title>
+	<!-- CSS y Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+	<link href="/CSS/Iniciar.css" rel="stylesheet">
+
+
+
+	<!-- Logo -->
+	<link rel="icon" href="/IMG/user.svg" />
+	<!-- Logo -->
+
+	<style>
+		.password-icon {
+			float: right;
+			position: relative;
+			margin: -25px 10px 0 0;
+			cursor: pointer;
+
+		}
+
+		.formulario {
+			margin-top: 15%;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<!--JavaScript-->
+	<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<!--JavaScript-->
+
+	<!--Vaalidación-->
+
+	<script>
+		window.addEventListener("load", function () {
+
+			// icono para mostrar contraseña
+			showPassword = document.querySelector('.show-password');
+			showPassword.addEventListener('click', () => {
+
+				// elementos input de tipo clave
+				password1 = document.querySelector('.password1');
+				password2 = document.querySelector('.password2');
+
+				if (password1.type === "text") {
+					password1.type = "password"
+					password2.type = "password"
+					showPassword.classList.remove('fa-eye-slash');
+				} else {
+					password1.type = "text"
+					password2.type = "text"
+					showPassword.classList.toggle("fa-eye-slash");
+				}
+
+			})
+
+		});
+	</script>
+
+	<form class="formulario">
+
+		<h1>Iniciar sesión</h1>
+		<div class="contenedor">
+
+
+
+			<div class="input-contenedor">
+				<i class="fas fa-envelope icon"></i>
+				<input id="u" type="text" name="username" placeholder="Correo Electronico" maxlength="30" required>
+
+			</div>
+
+			<div class="input-contenedor">
+				<input id="p" type="password" name="password" class="form-control password1" placeholder="Contraseña"
+					required>
+				<span class="fa fa-fw fa-eye password-icon show-password"></span>
+			</div>
+
+
+
+
+			<input type="button" value="Iniciar sesión" id="submit" class="button" onclick="validate()" />
+
+			<br><br>
+
+
+			<p><a class="link" href="/Recuperar">¿Olvidó su contraseña? </a></p>
+			<p><a class="link" th:href="@{/Registrar}">Crear cuenta </a>
+			</p>
+
+
+		</div>
+
+
+
+
+</body>
+
+
+
+
+</html>

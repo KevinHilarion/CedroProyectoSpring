@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<title>El Cedro - Cotizar</title>
+	<!-- CSS y Bootstrap -->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="CSS/CotizarC.css">
+	<link rel="stylesheet" href="CSS/Slide - Menú.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="Social bar/font.css">
+	<link rel="stylesheet" href="Social bar/main.css">
+	<link rel="stylesheet" href="Social bar/style.css">
+	<!-- CSS y Bootstrap -->
+
+	<!-- Logo -->
+	<link rel="icon" href="/IMG/cotizar.svg" />
+	<!-- Logo -->
+</head>
+
+<body>
+
+	<!--Alerta Inicio-->
+	<script>
+		window.alert(
+			"Recuerda que esta cotización es solo una aproximación al precio real del producto. Comunicate con nosotros via Whatsapp para hacer tu cotización"
+		)
+
+		function test() {
+			var x = + document.getElementById('select1').value;
+			var y = + document.getElementById('select2').value;
+			var c = + document.getElementById('select3').value;
+			var cant = document.getElementById('cant').value;
+			document.getElementById('result').innerHTML = ((x + y + c) * cant);
+		}
+	</script>
+	<!--Alerta Inicio-->
+
+
+	<!--JavaScript-->
+	<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="/js/Slide - menú.js"></script>
+	<script src="/js/MensajeIndex.js"></script>
+	<script src="/js/validar.js"></script>
+	<!--JavaScript-->
+
+
+
+
+	<!--Header-->
+	<header>
+
+		<a href="">
+			<img src="/IMG/Header-web.png" title="El Cedro" style="margin-top:-2% ; width: 100.1%; " />
+
+	</header>
+	<!--Header-->
+
+	<!--Menu-->
+	<div class="container">
+		<div class="tutorial">
+			<ul>
+				<a href="index">
+					<li>Inicio</li>
+				</a>
+				<a href="/Iniciar">
+					<li>Iniciar sesión <i class="fa-solid fa-arrow-right-to-bracket"></i></li>
+				</a>
+				<li>Inspiración<i class="fa fa-angle-down"></i>
+					<ul>
+						<a href="https://www.calameo.com/read/0064764772511493c05db" target="_blank">
+							<li>Salas</li>
+						</a>
+						<a href="https://www.calameo.com/read/0064764772aef44efd3a8" target="_blank">
+							<li>Comedores</li>
+						</a>
+						<a href="https://www.calameo.com/read/0064764770940b817492e" target="_blank">
+							<li>Closets</li>
+						</a>
+						<a href="https://www.calameo.com/read/006476477ff6d6f41cc58" target="_blank">
+							<li>Alcobas</li>
+						</a>
+					</ul>
+				</li>
+
+				<a onclick="mensaje()">
+					<li>Contactanos</li><a />
+			</ul>
+		</div>
+	</div>
+	<!--Menu-->
+
+
+	<!--Contenido-->
+
+	<!--Social bar-->
+	<div class="social-bar">
+		<a href="https://www.facebook.com/Maderas-Finas-101500835023458/?modal=admin_todo_tour" target="_blank"
+			class="icon icon-facebook"></a>
+		<a href="https://wa.link/2rn9mf" target="_blank" class="icon icon-whatsapp"></a>
+		<a href="https://www.instagram.com/" target="_blank" class="icon icon-instagram"></a>
+	</div>
+	<!--Social bar-->
+
+	<!--Formulario-->
+	<br>
+	<div class="formulario">
+		<div class="row">
+			<div>
+				<h1>Cotizar</h1>
+				<div class="card-body">
+					<form>
+
+						<!--Lista desplegable-->
+						<form action="#">
+							<label for="#">Producto:</label><br>
+							<select id="select1" name="#" required>
+								<option value="#">Selecciona una categoria</option>
+								<option value="2000000">Sala</option>
+								<option value="3000000">Comedor</option>
+								<option value="4500000">Alcoba</option>
+								<option value="1500000">Closet</option>
+							</select>
+						</form><br>
+						<!--Lista desplegable-->
+
+						<!--Diseno Producto-->
+						<form action="#">
+							<label for="#">Diseño:</label><br>
+							<select id="#" name="#" required>
+								<option value="#">Selecciona un diseño</option>
+								<option value="#">Clásico</option>
+								<option value="#">Moderno</option>
+								<option value="#">Deko</option>
+								<option value="#">Rustico</option>
+							</select>
+						</form><br>
+						<!--Diseno Producto-->
+
+						<!--Tipo tela-->
+						<form action="#">
+							<label for="#" title="Solo si aplica">Tipo de tela:</label>
+							<select id="select2" name="#" title="Solo si aplica">
+								<option value="#">Selecciona un tipo de tela (si aplica)</option>
+								<option value="100000">Lino</option>
+								<option value="225000">Prana</option>
+								<option value="100000">Cuero</option>
+								<option value="150000">Cuerina</option>
+								<option value="250000">Terciopelo</option>
+								<option value="200000">Bravia</option>
+							</select>
+						</form><br>
+						<!--Tipo tela-->
+
+						<!--Color-->
+						<label for="#" title="Solo si aplica">Color Tela:</label><br>
+						<input type="color" title="Solo si aplica"><br><br>
+						<!--Color-->
+
+						<!--Detalle Cotizacion-->
+						<form action="#">
+							<label for="#">Tipo de madera:</label>
+							<select id="select3" name="#" required>
+								<option value="#">Selecciona un tipo de madera</option>
+								<option value="175000">Cedro</option>
+								<option value="200000">Flor morado</option>
+								<option value="150000">Nogal</option>
+							</select>
+						</form><br>
+						<!--Detalle Cotizacion-->
+
+						<!--Detalle Producto-->
+						<form action="#">
+							<label for="#">Color madera:</label><br>
+							<select id="" name="#" required>
+								<option value="#">Selecciona un color</option>
+								<option value="#">Miel</option>
+								<option value="#">Wengue</option>
+								<option value="#">Blanco</option>
+								<option value="#">Gris</option>
+								<option value="#">Caramelo</option>
+								<option value="#">Cedro</option>
+								<option value="#">Natural</option>
+							</select>
+						</form><br>
+						<!--Detalle Producto-->
+
+						<!--Cantidad-->
+						<label for="#">Cantidad:</label><br>
+						<input type="text" id="cant" th:onkeypress="return SoloNumeros(event);"
+							placeholder="Cantidad de productos"><br><br>
+						<!--Cantidad-->
+
+						<!--Resultado-->
+
+						<h4 id="result">Valor cotización:</h4>
+
+						<!--Resultado-->
+
+
+						<!--Boton C-->
+						<div>
+							<button class="btn btn-success" onclick="test()">Cotizar</button>
+						</div>
+						<!--Boton C-->
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Formulario-->
+
+
+	<!--Contenido-->
+
+
+	<!--footer-->
+
+	<div>
+	<div class="footer-clean">
+		<footer>
+			<div class="container__footer">
+				<div class="box__footer">
+					<div class="logo">
+						<img src="img/logo.png" alt="">
+					</div>
+					<div class="terms">
+						<p>El Cedro es un sistema de información encargado de la gestión de ventas, inventario y
+							producción de la empresa Madera Finas.</p>
+					</div>
+				</div>
+				<div class="box__footer">
+					<h2>Soluciones</h2>
+					<a href="https://www.google.com">App Desarrollo</a>
+					<a href="#">App Marketing</a>
+					<a href="#">IOS Desarrollo</a>
+					<a href="#">Android Desarrollo</a>
+				</div>
+
+				<div class="box__footer">
+					<h2>Compañia</h2>
+					<a href="#">Acerca de</a>
+					<a href="#">Trabajos</a>
+					<a href="#">Procesos</a>
+					<a href="#">Servicios</a>
+				</div>
+
+				<div class="box__footer">
+					<h2>Redes Sociales</h2>
+					<a href="https://www.facebook.com/Maderas-Finas-101500835023458/?modal=admin_todo_tour"
+						target="_blank"> <i class="fab fa-facebook-square"></i> Facebook</a>
+					<a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
+					<a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
+					<a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i>
+						Instagram</a>
+				</div>
+
+			</div>
+
+			<div class="box__copyright">
+				<hr>
+				<p>Todos los derechos reservados © 2022 <b>El Cedro</b></p>
+			</div>
+			
+			</footer>
+			</div>
+	</div>
+		
+
+		<!--footer-->
+
+
+
+</body>
+
+</html>
